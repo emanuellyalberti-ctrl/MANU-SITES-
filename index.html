@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qualidade de Vida e Saúde</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f8f5;
+    color: #263b35;
+}
+
+header {
+    background: #16866b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #116b56;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    color: #16866b;
+    margin-bottom: 12px;
+}
+
+.formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+.formulario h2 {
+    color: #16866b;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    background: #16866b;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #116b56;
+}
+
+#resultado {
+    display: none;
+    margin-top: 20px;
+    background: #e1f5ec;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #116b56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Qualidade de Vida e Saúde</h1>
+    <p>Cuide de você. Sua saúde é seu maior patrimônio!</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#formulario">Formulário</a>
+</nav>
+
+<main>
+
+<section class="intro" id="inicio">
+    <h2>Uma vida mais saudável começa com você!</h2>
+    <p>
+        A qualidade de vida está relacionada aos nossos hábitos,
+        alimentação, saúde física e mental, sono e bem-estar.
+        Responda ao formulário e reflita sobre seus hábitos diários.
+    </p>
+</section>
+
+<section class="formulario" id="formulario">
+
+<h2>📋 Formulário de Saúde</h2>
+
+<form id="formSaude">
+
+<label>Nome completo:</label>
+<input type="text" id="nome" placeholder="Digite seu nome" required>
+
+<label>E-mail:</label>
+<input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+<label>Idade:</label>
+<input type="number" id="idade" min="1" max="120" required>
+
+<label>Como você considera sua saúde atualmente?</label>
+<select id="saude" required>
+    <option value="">Selecione</option>
+    <option>Excelente</option>
+    <option>Boa</option>
+    <option>Regular</option>
+    <option>Ruim</option>
+</select>
+
+<label>Você pratica atividades físicas?</label>
+<select id="exercicio" required>
+    <option value="">Selecione</option>
+    <option>Todos os dias</option>
+    <option>Algumas vezes na semana</option>
+    <option>Raramente</option>
+    <option>Nunca</option>
+</select>
+
+<label>Como é sua alimentação?</label>
+<select id="alimentacao" required>
+    <option value="">Selecione</option>
+    <option>Muito saudável</option>
+    <option>Saudável</option>
+    <option>Pouco saudável</option>
+    <option>Preciso melhorar</option>
+</select>
+
+<label>Quantas horas você dorme por noite?</label>
+<select id="sono" required>
+    <option value="">Selecione</option>
+    <option>Menos de 5 horas</option>
+    <option>Entre 5 e 6 horas</option>
+    <option>Entre 7 e 8 horas</option>
+    <option>Mais de 8 horas</option>
+</select>
+
+<label>Como está sua saúde mental?</label>
+<select id="mental" required>
+    <option value="">Selecione</option>
+    <option>Muito boa</option>
+    <option>Boa</option>
+    <option>Regular</option>
+    <option>Preciso de mais cuidados</option>
+</select>
+
+<label>Você bebe água frequentemente?</label>
+<select id="agua" required>
+    <option value="">Selecione</option>
+    <option>Sim, bastante</option>
+    <option>Às vezes</option>
+    <option>Quase nunca</option>
+</select>
+
+<label>O que você gostaria de melhorar na sua qualidade de vida?</label>
+<textarea id="melhoria" rows="4"
+placeholder="Escreva sua resposta..." required></textarea>
+
+<button type="submit">Enviar respostas</button>
+
+</form>
+
+<div id="resultado">
+    <h3>✅ Formulário enviado!</h3>
+    <p id="mensagem"></p>
+</div>
+
+</section>
+</main>
+
+<footer>
+    <p>Projeto Qualidade de Vida e Saúde © 2026</p>
+    <p>Promovendo saúde, bem-estar e hábitos saudáveis.</p>
+</footer>
+
+<script>
+document.getElementById("formSaude").addEventListener("submit",
+function(event) {
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+
+    document.getElementById("mensagem").innerHTML =
+        "Obrigado pela participação, <strong>" + 
+        nome.replace(/[&<>"']/g, "") +
+        "</strong>! Suas respostas foram registradas nesta página.";
+
+    document.getElementById("resultado").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
